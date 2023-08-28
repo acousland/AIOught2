@@ -1,5 +1,6 @@
 import chatgptIntegration as gpt
 import pandas as pd
+from prettytable import PrettyTable
 
 def collectResponse(_question, _options):
     print(_question)
@@ -125,4 +126,4 @@ results = pd.DataFrame(
      'Desired_Response': responseList
     })
 
-print(results)
+print(results.to_markdown())
